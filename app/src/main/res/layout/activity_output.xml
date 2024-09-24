@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Output"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/swing_gate_img"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/sliding_gate_img"
+        android:visibility="visible"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/OutputDetailsOfGate"
+        android:layout_marginHorizontal="15dp"
+        android:textColor="@color/black"
+        android:text="Durability: Gates are designed to withstand various weather conditions, ensuring long-lasting performance and minimal maintenance.
+
+Security: Provides enhanced security for properties, acting as a barrier against unauthorized access.\n\n
+Aesthetic Appeal: Available in various designs, colors, and materials, enhancing the overall look of your property.\n\n
+Customization: Can be tailored to fit specific sizes and styles, ensuring they meet your unique needs.\n\n
+Ease of Use: Equipped with user-friendly mechanisms (manual or automatic) for convenient operation.\n\n
+Versatility: Suitable for residential, commercial, and industrial applications, serving multiple purposes.\n\n
+Material Options: Common materials include wood, metal, and vinyl, each offering distinct advantages in terms of style and maintenance.\n\n
+Privacy: Solid gates can provide an added level of privacy for homes and yards.\n\n
+Environmentally Friendly: Options available in sustainable materials and designs that minimize environmental impact."/>
+
+</LinearLayout>
