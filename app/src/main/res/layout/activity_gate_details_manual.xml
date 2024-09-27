@@ -8,194 +8,370 @@
     tools:context=".GateDetailsManual"
     android:background="@color/white">
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/GateDetailsMainLinearLayout"
-        android:orientation="vertical"
-        android:layout_marginTop="40dp"
-        android:layout_above="@+id/GateDetailsSubmitButton">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gate Date"
-            android:layout_gravity="center_horizontal"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Location"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Location"
-            android:layout_marginHorizontal="20dp"
-            app:boxCornerRadiusBottomEnd="15dp"
-            app:boxCornerRadiusBottomStart="15dp"
-            app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
-            android:layout_marginTop="30dp"
-            android:textColorHint="@color/black"
-            >
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/GateHeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Height"
-            android:layout_marginHorizontal="20dp"
-            app:boxCornerRadiusBottomEnd="15dp"
-            app:boxCornerRadiusBottomStart="15dp"
-            app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
-            android:layout_marginTop="30dp"
-            android:textColorHint="@color/black"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/GateWidth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Width"
-            android:layout_marginHorizontal="20dp"
-            app:boxCornerRadiusBottomEnd="15dp"
-            app:boxCornerRadiusBottomStart="15dp"
-            app:boxCornerRadiusTopEnd="15dp"
-            app:boxCornerRadiusTopStart="15dp"
-            android:layout_marginTop="30dp"
-            android:textColorHint="@color/black"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Type of Gate"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/black"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="18dp">
-            
-            <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:backgroundTint="#ECF0F1"
-                app:cardCornerRadius="4dp"
-                android:layout_marginHorizontal="10dp"
-                android:id="@+id/GateDetailsSlidingGateCardview"
+                android:layout_height="match_parent"
+                android:id="@+id/GateDetailsMainLinearLayout"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="20dp"
                 >
 
-                <RelativeLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gate Data"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Location"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Location"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="@color/black"
                     >
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/GateDetailsSlidingText"
-                        android:text="Sliding Gate"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/black"
+
                         />
-                </RelativeLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="90dp"
-                android:layout_height="30dp"
-                android:id="@+id/GateDetailsSwingGateCardview"
-                android:backgroundTint="#ECF0F1"
-                app:cardCornerRadius="4dp"
-                android:layout_marginHorizontal="10dp">
-
-                <RelativeLayout
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/GateHeight"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Height"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/black"
                     >
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/GateDetailsSwingGateText"
-                        android:text="Swing Gate"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/black"
                         />
-                </RelativeLayout>
 
-            </androidx.cardview.widget.CardView>
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="30dp"
-                android:id="@+id/GateDetailsOthersCardview"
-                android:backgroundTint="#ECF0F1"
-                app:cardCornerRadius="4dp"
-                android:layout_marginHorizontal="10dp">
-
-                <RelativeLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/GateWidth"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Width"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/black"
                     >
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/GateDetailsOthersText"
-                        android:text="Others"
-                        android:layout_centerInParent="true"
-                        android:textColor="@color/black"
                         />
-                </RelativeLayout>
 
-            </androidx.cardview.widget.CardView>
-            
-        </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type of Gate"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="#ECF0F1"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:id="@+id/GateDetailsSlidingGateCardview"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/GateDetailsSlidingText"
+                                android:text="Sliding Gate"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/black"
+                                />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/GateDetailsSwingGateCardview"
+                        android:backgroundTint="#ECF0F1"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginHorizontal="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/GateDetailsSwingGateText"
+                                android:text="Swing Gate"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/black"
+                                />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
 
 
-    </LinearLayout>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/GateDetailsSubmitButton"
-        android:text="Submit"
-        android:backgroundTint="@color/blue"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:paddingVertical="15dp"
-        android:textSize="20sp"
-        android:layout_marginHorizontal="20dp"
-        android:textColor="@color/white"
-        />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/SwingGateOpeningAngle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Opening Angle (For Swing Gate)"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:textColorHint="@color/black"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cabling and Material Storage"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="#ECF0F1"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:id="@+id/CablingProvisions"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/CablingProvisionsText"
+                                android:text="Cabling Provisions"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/black"
+                                />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/MaterialStorage"
+                        android:backgroundTint="#ECF0F1"
+                        app:cardCornerRadius="4dp"
+                        android:layout_marginHorizontal="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MaterialStorageText"
+                                android:text="material Storage"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/black"
+                                />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Superimpose Drawing"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/uploadImgCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginHorizontal="30dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@drawable/dotted_border"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardElevation="8dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+
+
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/upload"
+                            android:layout_gravity="center_horizontal"
+                            />
+
+                        <Button
+                            android:id="@+id/uploadImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Image"
+                            android:layout_gravity="center_horizontal"
+                            android:backgroundTint="@color/blue"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="8dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="File Supported .png, .jpg, .jpeg"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- ImageView to display the uploaded image -->
+                <ImageView
+                    android:id="@+id/imagePreview"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/uploadImageButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:contentDescription="Uploaded Image Preview"
+                    android:scaleType="centerCrop"
+                    android:background="@color/blue"
+                    android:layout_gravity="center_horizontal"/>
+
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GateDetailsSubmitButton"
+                    android:text="Submit"
+                    android:backgroundTint="@color/blue"
+                    android:layout_marginBottom="20dp"
+                    android:paddingVertical="15dp"
+                    android:textSize="20sp"
+                    android:layout_marginHorizontal="20dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="30dp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
 
 </RelativeLayout>
